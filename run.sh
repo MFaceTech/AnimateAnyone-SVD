@@ -1,0 +1,20 @@
+accelerate launch train.py \
+ --pretrained_model_name_or_path="stabilityai/stable-video-diffusion-img2vid-xt" \
+ --output_dir="output" \
+ --width=512 \
+ --height=512  \
+ --learning_rate=1e-5 \
+ --per_gpu_batch_size=1 \
+ --max_train_steps=30000 \
+ --mixed_precision="fp16" \
+ --gradient_accumulation_steps=2 \
+ --checkpointing_steps=2000 \
+ --validation_steps=1000 \
+ --gradient_checkpointing \
+ --mixed_precision="fp16" \
+ --enable_xformers_memory_efficient_attention \
+ --dataset_type="UBC_Fashion" \
+ --csv_path="UBC_Fashion/UBC_train_info.csv" \
+ --video_folder="UBC_Fashion/ubc-fashion" \
+ --validation_image_folder="./validation_demo/ubc_fashion/A1ZoOtffkDS/image" \
+ --validation_control_folder="./validation_demo/ubc_fashion/A1ZoOtffkDS/dwpose"

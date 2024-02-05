@@ -1,0 +1,12 @@
+svd.safetensors
+controlnet
+output
+validation_demo
+__pycache__
+.ipynb_checkpoints
+pipeline/.ipynb_checkpoints
+utils/.ipynb_checkpoints
+.idea/
+.DS_Store
+svd_poseguider/.DS_Store
+
