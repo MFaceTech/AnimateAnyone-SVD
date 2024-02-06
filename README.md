@@ -3,7 +3,7 @@
 ## Overview
 In this project, we provide another easier implement scheme (SVD_PoseGuider) for character animation, such as human dance generation. Different from AnimateAnyone, we adopt SVD (Stable Video Diffusion) as our base model, and inject the pose information to the unet through a temporal-controlnet. The whole training strategy is simplified from two-stages to one-stage.
 
-It's worth noting that this project is a preliminary version, we will continue to develop it and welcome feedbacks and ideas from the community as well. 
+It's worth noting that this project is a preliminary version, we will continue to develop it and welcome feedbacks and ideas from the community. 
 
 ## 🔥 Update
 - **[2024.2.5]** The pretrained weights are released.
@@ -19,29 +19,17 @@ We plan to optimize the preliminary model in following ways:
 #### UBC_Fashion Demo
 | Demo(UBC_Fashion#1)  | Demo(UBC_Fashion#2) |
 | ------------- | ------------- |
-| ![Input image](assets/ubc1.gif)  | ![](assets/ubc2.gif) |
+| ![](assets/ubc1.gif)  | ![](assets/ubc2.gif) |
 
 #### SVD_PoseGuider with Face Embedding (UBC_Fashion#1)
-<video width="240" height="360" controls>
- <source src="assets/ubc1_face_enhance.mp4" type="video/mp4">
- <!-- <source src="movie.ogg" type="video/ogg"> -->
- Your browser does not support the video tag.
-</video>
+| SVD_PoseGuider  | W_Face_Embedding  |
+| ------------- | ----- |
+| ![](assets/ubc1.gif)| ![](assets/ubc1_face_enhance.gif)|
 
 #### TikTok Demo
-<video width="240" height="360" controls>
- <source src="assets/tiktok1.mp4" type="video/mp4">
- <!-- <source src="movie.ogg" type="video/ogg"> -->
- Your browser does not support the video tag.
-</video>
-
-<video width="240" height="360" controls>
- <source src="assets/tiktok2.mp4" type="video/mp4">
- <!-- <source src="movie.ogg" type="video/ogg"> -->
- Your browser does not support the video tag.
-</video>
-
-
+| Demo(TikTok)  | Demo(TikTok#2)|
+| ------------- | ------------- |
+| ![](assets/tiktok1.gif)|![](assets/tiktok2.gif)|
 
 ## Setup
 - **Computing resource requirements**: This task needs the support of high memory GPUs. We train the model under the condition of  *A100\*8 with 80g* and inferecence on 1 *v100* with 32g.
