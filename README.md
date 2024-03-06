@@ -22,12 +22,12 @@ We plan to optimize the preliminary model in following ways:
 | ![](assets/ubc1.gif)  | ![](assets/ubc2.gif) |
 
 #### SVD_PoseGuider with Face Embedding (UBC_Fashion#1)
-| SVD_PoseGuider  | W_Face_Embedding  |
+| SVD_PoseGuider  | w_face_enhance  |
 | ------------- | ----- |
 | ![](assets/ubc1.gif)| ![](assets/ubc1_face_enhance.gif)|
 
 #### TikTok Demo
-| Demo(TikTok)  | Demo(TikTok#2)|
+| Demo(TikTok#1)  | Demo(TikTok#2)|
 | ------------- | ------------- |
 | ![](assets/tiktok1.gif)|![](assets/tiktok2.gif)|
 

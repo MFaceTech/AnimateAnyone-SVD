@@ -3,6 +3,7 @@ import math
 import os
 import shutil
 from pathlib import Path
+import random
 
 import accelerate
 import torch
@@ -370,7 +371,8 @@ def main():
                 latents = tensor_to_vae_latent(pixel_values, vae)
                 bsz = latents.shape[0]
 
-                conditional_pixel_values = pixel_values[:, 0:1, :, :, :]
+                refer_index = random.randint(1, int(args.num_frames))
+                conditional_pixel_values = pixel_values[:, (refer_index-1):refer_index, :, :, :]
                 cond_sigmas = rand_log_normal(shape=[bsz, ], loc=-3.0, scale=0.5).to(latents)
                 cond_sigmas = cond_sigmas[:, None, None, None, None]
                 conditional_pixel_values = conditional_pixel_values + cond_sigmas * torch.randn_like(
