@@ -98,5 +98,5 @@ accelerate launch train_svd.py \
 ## Acknowledgements
 - Codebase built upon [SVD_Xtend](https://github.com/pixeli99/SVD_Xtend) and [svd-temporal-controlnet](https://github.com/CiaraStrawberry/svd-temporal-controlnet)
 
-## Acknowledgements
+## Main Contributor
 Qiu Di: qiudihk@gmail.com
